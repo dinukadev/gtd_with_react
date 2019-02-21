@@ -15,6 +15,8 @@ class Gtd extends Component {
         this.inputRef = React.createRef();
     }
 
+    // The commented part shows how state would be maintained if Redux was not used
+
     // taskRemovedHandler = (taskName) => {
     //     let updatedTasks = Array(...this.state.tasks);
     //     updatedTasks = updatedTasks.reduce((arr,element,index)=>{
