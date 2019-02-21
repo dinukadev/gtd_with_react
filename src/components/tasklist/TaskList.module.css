@@ -1,0 +1,16 @@
+.TaskList{
+
+}
+
+.TaskList ul{
+    list-style: none;
+    border: 1px solid;
+    margin: 1px;
+    width: 600px;
+}
+
+
+.TaskList ul li{
+    display:inline-block;
+    width: 200px;
+}
