@@ -5,8 +5,10 @@
 /.pnp
 .pnp.js
 
+.idea
 # testing
 /coverage
+*.iml
 
 # production
 /build
