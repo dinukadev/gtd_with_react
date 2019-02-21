@@ -14,7 +14,18 @@ class Gtd extends Component {
     }
 
     taskRemovedHandler = (taskName) => {
-        console.log('Task removed for : ' + taskName);
+        let updatedTasks = Array(...this.state.tasks);
+        updatedTasks = updatedTasks.reduce((arr,element,index)=>{
+            if(element.name===taskName){
+                arr.splice(index,1);
+            }else{
+                arr.push(element);
+            }
+            return arr;
+        },[]);
+        this.setState({
+            tasks: updatedTasks
+        })
     };
 
     taskAddedHandler = () => {
@@ -27,6 +38,7 @@ class Gtd extends Component {
         this.setState({
             tasks: updatedTasks
         })
+        this.inputRef.current.value='';
     };
 
     render() {
