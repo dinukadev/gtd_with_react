@@ -3,6 +3,7 @@ import Task from '../components/task/Task';
 import TaskList from '../components/tasklist/TaskList';
 import {connect} from 'react-redux';
 import * as actionCreators from '../store/actions/TaskActions';
+import batmanlogo from '../assets/images/batman.png'
 class Gtd extends Component {
 
     // state = {
@@ -47,6 +48,7 @@ class Gtd extends Component {
             <div>
                 <Task taskAdded={()=>this.props.taskAddedHandler(this.inputRef)} passRef={this.inputRef}/>
                 <TaskList taskRemoved={this.props.taskRemovedHandler} tasks={this.props.tasks}/>
+                <div style={{'position': 'absolute','right':'10px','top': '10px'}}><img src={batmanlogo} alt="logo"></img></div>
             </div>
         )
     }
