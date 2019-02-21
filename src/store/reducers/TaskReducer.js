@@ -32,14 +32,7 @@ const taskAddedHandler = (inputRef, state) => {
 
 const taskRemovedHandler = (taskName, state) => {
     let updatedTasks = Array(...state.tasks);
-    updatedTasks = updatedTasks.reduce((arr, element, index) => {
-        if (element.name === taskName) {
-            arr.splice(index, 1);
-        } else {
-            arr.push(element);
-        }
-        return arr;
-    }, []);
+    updatedTasks = updatedTasks.filter((task,_)=> task.name!==taskName);
     return {
         tasks: updatedTasks
     };

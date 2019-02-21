@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const taskaction = (props) => (
 
@@ -7,4 +8,7 @@ const taskaction = (props) => (
          style={{'width': '30px', 'height': '20px', 'cursor': 'pointer'}}></img>
 );
 
+taskaction.propTypes = {
+    taskDescription: PropTypes.string
+}
 export default taskaction;

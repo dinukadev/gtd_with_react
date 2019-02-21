@@ -1,6 +1,8 @@
 import React from 'react';
 import classes from './Task.module.css';
 import TaskActions from '../taskactions/TaskActions';
+import PropTypes from 'prop-types';
+
 const task = (props) =>{
     const taskActionsRequired = [{
         actionFunction: props.taskAdded,
@@ -14,5 +16,11 @@ const task = (props) =>{
       </div>
     );
 };
+
+task.propTypes = {
+    passRef: PropTypes.object,
+    taskAdded: PropTypes.func
+
+}
 
 export default task;
