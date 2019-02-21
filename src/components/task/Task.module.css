@@ -1,0 +1,15 @@
+.Task {
+    margin: 20px;
+}
+
+.Task label {
+    padding: 10px;
+}
+
+.Task input {
+    border: 1px solid;
+    width: 250px;
+    height: 30px;
+    font: inherit;
+    outline: 0;
+}
