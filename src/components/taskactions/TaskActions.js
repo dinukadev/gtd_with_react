@@ -16,13 +16,9 @@ const knownActionsMetaData = {
 const taskaction = (props) => {
     return props.taskActions.map((taskAction) => {
         const actionFunction = taskAction.actionFunction;
-        const actionMetaData = Object.keys(knownActionsMetaData).filter((val) =>{
-           return val === taskAction.requiredAction;
-        }).map((key) =>{
-            return knownActionsMetaData[key];
-        });
-        return <TaskAction key={taskAction.requiredAction} taskClicked={actionFunction} taskIcon={actionMetaData[0].imageSrc}
-                           taskDescription={actionMetaData[0].imageAlt}/>
+        const actionMetaData = knownActionsMetaData[taskAction.requiredAction];
+        return <TaskAction key={taskAction.requiredAction} taskClicked={actionFunction} taskIcon={actionMetaData.imageSrc}
+                           taskDescription={actionMetaData.imageAlt}/>
     });
 
 
