@@ -9,7 +9,7 @@ const task = (props) =>{
     return (
       <div className={classes.Task}>
           <label>Task</label>
-          <input type="text" />
+          <input type="text" ref={props.passRef}/>
           <TaskActions taskActions={taskActionsRequired}/>
       </div>
     );
